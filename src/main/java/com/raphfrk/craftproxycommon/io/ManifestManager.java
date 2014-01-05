@@ -72,7 +72,6 @@ public class ManifestManager {
 		URL url = ManifestManager.class.getProtectionDomain().getCodeSource().getLocation();
 
 		if (url == null) {
-			System.out.println("Url is null");
 			return null;
 		}
 		
@@ -82,8 +81,6 @@ public class ManifestManager {
 		} catch (URISyntaxException e) {
 			throw new IOException(e);
 		}
-		
-		System.out.println("Jar file " + file);
 		
 		JarFile jarFile = new JarFile(file);
 		
